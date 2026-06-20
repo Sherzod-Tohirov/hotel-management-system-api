@@ -8,10 +8,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "seed": "node database/seeds/runSeeds.js",
+    "seed:reset": "node database/seeds/runSeeds.js --reset",
+    "migrate": "node database/migrations/runMigrations.js",
+    "migrate:reset": "node database/migrations/runMigrations.js --reset"
   },
   "dependencies": {
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "pg": "^8.21.0"
   },
